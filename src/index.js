@@ -61,8 +61,8 @@ function createMarkup(data) {
   </ul>`;
 }
 
+//---------------------------------------------
 refs.select.addEventListener('change', handlerChange);
-
 function handlerChange(evt) {
   refs.section.innerHTML = '';
   showLoader();
