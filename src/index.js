@@ -1,3 +1,4 @@
+/************ import ************/
 import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
 import {
   showLoader,
@@ -10,6 +11,8 @@ import SlimSelect from 'slim-select';
 import 'slim-select/styles';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+//---------------------------------------------
+
 const refs = {
   select: document.querySelector('.breed-select'),
   section: document.querySelector('.cat-info'),
@@ -37,6 +40,7 @@ fetchBreeds()
     })
   );
 
+//---------------------------------------------
 function createMarkupSelect(arr) {
   return arr
     .map(
@@ -56,7 +60,7 @@ function createMarkup(data) {
     <li class="js-item">
       <h1 class="js-title">${name}</h1>
       <p class="js-description">${description}</p>
-      <p class="js-temperament">Temperament: ${temperament}</p>
+      <p class="js-temperament"><span class="temp">Temperament:</span> ${temperament}</p>
     </li>
   </ul>`;
 }
