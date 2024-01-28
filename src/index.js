@@ -41,6 +41,11 @@ fetchBreeds()
   );
 
 //---------------------------------------------
+/**
+ * Markup generation options
+ * @param {*} arr
+ * @returns
+ */
 function createMarkupSelect(arr) {
   return arr
     .map(
@@ -50,6 +55,11 @@ function createMarkupSelect(arr) {
     .join('');
 }
 
+/**
+ * Markup generation kard
+ * @param {*} data
+ * @returns
+ */
 function createMarkup(data) {
   const {
     url,
